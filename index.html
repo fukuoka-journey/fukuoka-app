@@ -255,7 +255,7 @@ var SPOTS={
 };
 
 function selectSpot(id){var cardImg=document.getElementById('img-'+id);
-if(cardImg&&IMG[s.imgKey])cardImg.src=IMG[s.imgKey];
+if(cardImg&&IMG[id])cardImg.src=IMG[id];
   document.querySelectorAll('.spot-card').forEach(function(c){c.classList.remove('active');});
   document.querySelectorAll('.pin-hitarea').forEach(function(p){p.classList.remove('active');});
   var cd=document.getElementById('card-'+id),pp=document.getElementById('pin-'+id);
