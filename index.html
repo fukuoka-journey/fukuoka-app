@@ -294,7 +294,12 @@ function selectSpot(id){
 function ea(s){return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 var cH=[],cS='';
 function openChat(id){
- spots
+var s=SPOTS[id];if(!s)return;
+  cH=[];cS=s.sys;
+  document.getElementById('modal-title').textContent='会話練習';
+  document.getElementById('msgs').innerHTML='';
+  document.getElementById('overlay').classList.add('open');
+  am('ai','こんにちは！'+s.scene+'の練習をしましょう。\n(Hello! Let\'s practice Japanese for: '+s.scene+')');
 function am(t,tx){
   var el=document.getElementById('msgs');
   var d=document.createElement('div');d.className='msg '+t;d.textContent=tx;
