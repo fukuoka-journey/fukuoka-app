@@ -155,23 +155,6 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--brow
       </div>
     </div>
   </div>
-nagasaki:{
-  name:'長崎市',
-  nameRuby:'<ruby>長崎市<rt>ながさきし</rt></ruby>',
-  nameEn:'Nagasaki City',
-  imgKey:'nagasaki',
-  videoUrl:'https://youtu.be/d7xnwNFvjak?si=wYzvw04vfsBq3-nL',
-  desc:'<ruby>長崎<rt>ながさき</rt></ruby>は<ruby>港町<rt>こうまち</rt></ruby>の<ruby>雰囲気<rt>ふんいき</rt></ruby>とビールの<ruby>産地<rt>さんち</rt></ruby>として知られる町です。<ruby>飲み放題<rt>のみほうだい</rt></ruby>のバーやビアホールが多く、自分でビールサーバーを操作する楽しさも人気です。',
-  scene:'ビアホールで飲み放題を楽しむ場面',
-  convs:[
-    {spk:'あなた',ruby:'このビールサーバー、自分で使っていいんですか？',en:'Can I use this beer server myself?'},
-    {spk:'スタッフ',ruby:'はい、<ruby>飲み放題<rt>のみほうだい</rt></ruby>ですので、ご<ruby>自由<rt>じゆう</rt></ruby>にどうぞ。グラスを<ruby>斜め<rt>ななめ</rt></ruby>にして<ruby>注<rt>そそ</rt></ruby>ぐと<ruby>泡<rt>あわ</rt></ruby>が<ruby>少<rt>すく</rt></ruby>なくなりますよ。',en:"Yes, it's all-you-can-drink, so feel free! If you tilt the glass when pouring, you'll get less foam."},
-    {spk:'あなた',ruby:'あ、あふれちゃった！',en:'Oh no, it overflowed!'},
-    {spk:'スタッフ',ruby:'<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>ですよ、<ruby>最初<rt>さいしょ</rt></ruby>はみんなそうなりますよ。',en:'No worries, everyone does that at first!'},
-    {spk:'あなた',ruby:'もう<ruby>一杯<rt>いっぱい</rt></ruby>、<ruby>挑戦<rt>ちょうせん</rt></ruby>します！',en:"I'll try again for another glass!"}
-  ],
-  sys:'You are a friendly staff member at an all-you-can-drink beer hall in Nagasaki City. Help the user practice Japanese related to self-pour beer servers and dining out. Respond primarily in Japanese then English in parentheses. Gently correct mistakes. Keep replies concise (2-4 sentences).'
-}
 </section>
 <section class="detail-panel" id="detail-panel"><div class="detail-card" id="detail-card"></div></section>
 <div class="overlay" id="overlay">
@@ -215,32 +198,48 @@ IMG['yamakasa']='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUE
 
 var SPOTS={
   dazaifu:{
-    name:'\u592a\u5bb0\u5e9c\u5929\u6e80\u5bae',
-    nameRuby:'<ruby>\u592a\u5bb0\u5e9c\u5929\u6e80\u5bae<rt>\u3060\u3056\u3044\u3075\u3066\u3093\u307e\u3093\u3050\u3046</rt></ruby>',
+    name:'太宰府天満宮',
+    nameRuby:'<ruby>太宰府天満宮<rt>だざいふてんまんぐう</rt></ruby>',
     nameEn:'Dazaifu Tenmangu Shrine',imgKey:'dazaifu',
-    desc:'<ruby>\u592a\u5bb0\u5e9c\u5929\u6e80\u5bae<rt>\u3060\u3056\u3044\u3075\u3066\u3093\u307e\u3093\u3050\u3046</rt></ruby>\u306f<ruby>\u5b66\u554f<rt>\u304c\u304f\u3082\u3093</rt></ruby>\u306e<ruby>\u795e\u69d8<rt>\u304b\u307f\u3055\u307e</rt></ruby>\u30fb<ruby>\u83c5\u539f\u9053\u771f\u516c<rt>\u3059\u304c\u308f\u3089\u306e\u307f\u3061\u3056\u306d\u3053\u3046</rt></ruby>\u3092<ruby>\u795d<rt>\u307e\u3064</rt></ruby>\u308b<ruby>\u7dcf\u672c\u793e<rt>\u305d\u3046\u307b\u3093\u3057\u3083</rt></ruby>\u3067\u3059\u3002<ruby>\u53d7\u9a13<rt>\u3058\u3085\u3051\u3093</rt></ruby>\u30b7\u30fc\u30ba\u30f3\u306b\u306f<ruby>\u5168\u56fd<rt>\u305c\u3093\u3053\u304f</rt></ruby>\u304b\u3089<ruby>\u53c2\u62dd\u8005<rt>\u3055\u3093\u3071\u3044\u3057\u3083</rt></ruby>\u304c<ruby>\u8a3a<rt>\u304a\u3068\u305a</rt></ruby>\u308c\u3001<ruby>\u7d75\u99ac<rt>\u3048\u307e</rt></ruby>\u306b<ruby>\u9858<rt>\u306d\u304c</rt></ruby>\u3044\u3092<ruby>\u66f8<rt>\u304b</rt></ruby>\u3044\u3066<ruby>\u5949\u7d0d<rt>\u307b\u3046\u306e\u3046</rt></ruby>\u3057\u307e\u3059\u3002<ruby>\u53c2\u9053<rt>\u3055\u3093\u3069\u3046</rt></ruby>\u306e<ruby>\u6885\u30b1\u679d\u9905<rt>\u3046\u3081\u304c\u3048\u3082\u3061</rt></ruby>\u3082<ruby>\u6709\u540d<rt>\u3086\u3046\u3081\u3044</rt></ruby>\u3067\u3059\u3002',
-    scene:'\u7d75\u99ac\u3092\u66f8\u304f\u5834\u9762 \u2014 Writing an ema (prayer tablet)',
+    desc:'<ruby>太宰府天満宮<rt>だざいふてんまんぐう</rt></ruby>は<ruby>学問<rt>がくもん</rt></ruby>の<ruby>神様<rt>かみさま</rt></ruby>・<ruby>菅原道真公<rt>すがわらのみちざねこう</rt></ruby>を<ruby>祀<rt>まつ</rt></ruby>る<ruby>総本社<rt>そうほんしゃ</rt></ruby>です。<ruby>受験<rt>じゅけん</rt></ruby>シーズンには<ruby>全国<rt>ぜんこく</rt></ruby>から<ruby>参拝者<rt>さんぱいしゃ</rt></ruby>が<ruby>訪<rt>おとず</rt></ruby>れ、<ruby>絵馬<rt>えま</rt></ruby>に<ruby>願<rt>ねが</rt></ruby>いを<ruby>書<rt>か</rt></ruby>いて<ruby>奉納<rt>ほうのう</rt></ruby>します。<ruby>参道<rt>さんどう</rt></ruby>の<ruby>梅ヶ枝餅<rt>うめがえもち</rt></ruby>も<ruby>有名<rt>ゆうめい</rt></ruby>です。',
+    scene:'絵馬を書く場面 — Writing an ema (prayer tablet)',
     convs:[
-      {spk:'\u3042\u306a\u305f',ruby:'\u3059\u307f\u307e\u305b\u3093\u3001<ruby>\u7d75\u99ac<rt>\u3048\u307e</rt></ruby>\u306f\u3069\u3053\u3067<ruby>\u8cb7<rt>\u304b</rt></ruby>\u3048\u307e\u3059\u304b\uff1f',en:'Excuse me, where can I buy an ema (prayer tablet)?'},
-      {spk:'\u793e\u52d9\u6240',ruby:'\u3042\u3061\u3089\u306e<ruby>\u793e\u52d9\u6240<rt>\u3057\u3083\u3080\u3057\u3087</rt></ruby>\u3067\u304a<ruby>\u8cb7<rt>\u304b</rt></ruby>\u3044<ruby>\u6c42<rt>\u3082\u3068</rt></ruby>\u3081\u3044\u305f\u3060\u3051\u307e\u3059\u3002',en:'You can purchase one at the shrine office over there.'},
-      {spk:'\u3042\u306a\u305f',ruby:'<ruby>\u5408\u683c\u7948\u9858<rt>\u3054\u3046\u304b\u304f\u304d\u304c\u3093</rt></ruby>\u306e\u304a<ruby>\u5b88<rt>\u307e\u3082</rt></ruby>\u308a\u3082\u3042\u308a\u307e\u3059\u304b\uff1f',en:'Do you also have good luck charms for passing exams?'},
-      {spk:'\u793e\u52d9\u6240',ruby:'\u306f\u3044\u3001\u3054\u3056\u3044\u307e\u3059\u3002\u3069\u3046\u305e\u3053\u3061\u3089\u3078\u3002',en:'Yes, we do. Please come this way.'}
+      {spk:'あなた',ruby:'すみません、<ruby>絵馬<rt>えま</rt></ruby>はどこで<ruby>買<rt>か</rt></ruby>えますか？',en:'Excuse me, where can I buy an ema (prayer tablet)?'},
+      {spk:'社務所',ruby:'あちらの<ruby>社務所<rt>しゃむしょ</rt></ruby>でお<ruby>買<rt>か</rt></ruby>い<ruby>求<rt>もと</rt></ruby>めいただけます。',en:'You can purchase one at the shrine office over there.'},
+      {spk:'あなた',ruby:'<ruby>合格祈願<rt>ごうかくきがん</rt></ruby>のお<ruby>守<rt>まも</rt></ruby>りもありますか？',en:'Do you also have good luck charms for passing exams?'},
+      {spk:'社務所',ruby:'はい、ございます。どうぞこちらへ。',en:'Yes, we do. Please come this way.'}
     ],
     sys:'You are a warm guide at Dazaifu Tenmangu shrine in Fukuoka. Help the user practice Japanese. Respond primarily in Japanese then English in parentheses. Gently correct mistakes. Keep replies concise (2-4 sentences).'
   },
   yamakasa:{
-    name:'\u4e0a\u9808\u6075\u7960\u5712\u5c71\u7b20',
-    nameRuby:'<ruby>\u4e0a\u9808\u6075\u7960\u5712\u5c71\u7b20<rt>\u304b\u307f\u304b\u3059\u3044\u304e\u304a\u3093\u3084\u307e\u304b\u3055</rt></ruby>',
+    name:'上粕屋祇園山笠',
+    nameRuby:'<ruby>上粕屋祇園山笠<rt>かみかすいぎおんやまかさ</rt></ruby>',
     nameEn:'Kamikasui Gion Yamakasa Festival',imgKey:'yamakasa',videoUrl:'https://youtube.com/shorts/A7HdM1Iphfk',
-    desc:'<ruby>\u7cdf\u5c4b\u90e1\u9808\u6075\u753a<rt>\u304b\u3059\u3084\u3050\u3093\u3059\u3048\u307e\u3061</rt></ruby>\u306e<ruby>\u4e0a\u9808\u6075\u5730\u533a<rt>\u304b\u307f\u304b\u3059\u3044\u3061\u304f</rt></ruby>\u306b<ruby>\u4f1d<rt>\u3064\u305f</rt></ruby>\u308f\u308b<ruby>\u7960\u5712\u5c71\u7b20<rt>\u304e\u304a\u3093\u3084\u307e\u304b\u3055</rt></ruby>\u306f\u3001<ruby>\u798f\u5ca1<rt>\u3075\u304f\u304a\u304b</rt></ruby>\u306e<ruby>\u590f<rt>\u306a\u3064</rt></ruby>\u3092<ruby>\u5f69<rt>\u3044\u308d\u3069</rt></ruby>\u308b<ruby>\u7121\u5f62\u6c11\u4fd7\u6587\u5316\u8ca1<rt>\u3080\u3051\u3044\u307f\u3093\u305e\u304f\u3076\u3093\u304b\u3056\u3044</rt></ruby>\u3067\u3059\u3002<ruby>\u52c7\u58ee<rt>\u3086\u3046\u305d\u3046</rt></ruby>\u306a<ruby>\u98fe\u308a\u5c71<rt>\u304b\u3056\u308a\u3084\u307e</rt></ruby>\u3068<ruby>\u6b66\u5c06<rt>\u3076\u3057\u3087\u3046</rt></ruby>\u30fb<ruby>\u9f8d<rt>\u308a\u3085\u3046</rt></ruby>\u306e<ruby>\u4eba\u5f62<rt>\u306b\u3093\u304e\u3087\u3046</rt></ruby>\u304c\u898b\u308b\u4eba\u3092\u5727\u5012\u3057\u307e\u3059\u3002<ruby>\u5730\u57df<rt>\u3061\u3044\u304d</rt></ruby>\u306e\u8a87\u308a\u3067\u3059\u3002',
-    scene:'\u304a\u796d\u308a\u3067\u5730\u5143\u306e\u4eba\u3068\u8a71\u3059\u5834\u9762',
+    desc:'<ruby>糟屋郡粕屋町<rt>かすやぐんすえまち</rt></ruby>の<ruby>上粕屋地区<rt>かみかすいちく</rt></ruby>に<ruby>伝<rt>つた</rt></ruby>わる<ruby>祇園山笠<rt>ぎおんやまかさ</rt></ruby>は、<ruby>福岡<rt>ふくおか</rt></ruby>の<ruby>夏<rt>なつ</rt></ruby>を<ruby>彩<rt>いろど</rt></ruby>る<ruby>無形民俗文化財<rt>むけいみんぞくぶんかざい</rt></ruby>です。<ruby>勇壮<rt>ゆうそう</rt></ruby>な<ruby>飾り山<rt>かざりやま</rt></ruby>と<ruby>武将<rt>ぶしょう</rt></ruby>・<ruby>龍<rt>りゅう</rt></ruby>の<ruby>人形<rt>にんぎょう</rt></ruby>が見る人を圧倒します。<ruby>地域<rt>ちいき</rt></ruby>の誇りです。',
+    scene:'お祭りで地元の人と話す場面',
     convs:[
-      {spk:'\u3042\u306a\u305f',ruby:'\u3053\u306e<ruby>\u5c71\u7b20<rt>\u3084\u307e\u304b\u3055</rt></ruby>\u3001\u3059\u3054\u304f<ruby>\u8feb\u529b<rt>\u306f\u304f\u308a\u3087\u304f</rt></ruby>\u304c\u3042\u308a\u307e\u3059\u306d\uff01',en:'This yamakasa float is really impressive!'},
-      {spk:'\u5730\u5143\u306e\u65b9',ruby:'\u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3059\uff01<ruby>\u6bce\u5e74<rt>\u307e\u3044\u3068\u3057</rt></ruby>\u3053\u306e<ruby>\u6642\u671f<rt>\u3058\u304d</rt></ruby>\u3092<ruby>\u697d<rt>\u305f\u306e</rt></ruby>\u3057\u307f\u306b\u3057\u3066\u308b\u3093\u3067\u3059',en:'Thank you! We look forward to this time every year.'},
-      {spk:'\u3042\u306a\u305f',ruby:'\u3044\u3064\u304b\u3089<ruby>\u7d9a<rt>\u3064\u3065</rt></ruby>\u3044\u3066\u3044\u308b\u304a<ruby>\u796d\u308a<rt>\u307e\u3064\u308a</rt></ruby>\u3067\u3059\u304b\uff1f',en:'How long has this festival been going on?'},
-      {spk:'\u5730\u5143\u306e\u65b9',ruby:'<ruby>\u4f55\u767e\u5e74<rt>\u306a\u3093\u3073\u3083\u304f\u306d\u3093</rt></ruby>\u3082<ruby>\u7d9a<rt>\u3064\u3065</rt></ruby>\u304f<ruby>\u4f1d\u7d71\u884c\u4e8b<rt>\u3067\u3093\u3068\u3046\u304e\u3087\u3046\u3058</rt></ruby>\u3067\u3059\u3002<ruby>\u5730\u57df<rt>\u3061\u3044\u304d</rt></ruby>\u307f\u3093\u306a\u3067\u3064\u304f\u308b\u3093\u3067\u3059\u3088\u3002',en:"It's a tradition of hundreds of years \u2014 the whole community makes it together."}
+      {spk:'あなた',ruby:'この<ruby>山笠<rt>やまかさ</rt></ruby>、すごく<ruby>迫力<rt>はくりょく</rt></ruby>がありますね！',en:'This yamakasa float is really impressive!'},
+      {spk:'地元の方',ruby:'ありがとうございます！<ruby>毎年<rt>まいとし</rt></ruby>この<ruby>時期<rt>じき</rt></ruby>を<ruby>楽<rt>たの</rt></ruby>しみにしてるんです',en:'Thank you! We look forward to this time every year.'},
+      {spk:'あなた',ruby:'いつから<ruby>続<rt>つづ</rt></ruby>いているお<ruby>祭り<rt>まつり</rt></ruby>ですか？',en:'How long has this festival been going on?'},
+      {spk:'地元の方',ruby:'<ruby>何百年<rt>なんびゃくねん</rt></ruby>も<ruby>続<rt>つづ</rt></ruby>く<ruby>伝統行事<rt>でんとうぎょうじ</rt></ruby>です。<ruby>地域<rt>ちいき</rt></ruby>みんなでつくるんですよ。',en:"It's a tradition of hundreds of years — the whole community makes it together."}
     ],
     sys:'You are a friendly local from Kasuya-gun, Fukuoka at the Gion Yamakasa festival. Use a little Hakata dialect. Help the user practice Japanese. Respond primarily in Japanese then English in parentheses. Gently correct mistakes. Keep replies concise (2-4 sentences).'
+  },
+  nagasaki:{
+    name:'長崎市',
+    nameRuby:'<ruby>長崎市<rt>ながさきし</rt></ruby>',
+    nameEn:'Nagasaki City',imgKey:'nagasaki',
+    videoUrl:'https://youtu.be/d7xnwNFvjak?si=wYzvw04vfsBq3-nL',
+    desc:'<ruby>長崎<rt>ながさき</rt></ruby>は<ruby>港町<rt>こうまち</rt></ruby>の<ruby>雰囲気<rt>ふんいき</rt></ruby>と<ruby>ビール<rt>びーる</rt></ruby>の<ruby>産地<rt>さんち</rt></ruby>として知られる町です。<ruby>飲み放題<rt>のみほうだい</rt></ruby>のバーやビアホールが多く、自分でビールサーバーを操作する楽しさも人気です。',
+    scene:'ビアホールで飲み放題を楽しむ場面',
+    convs:[
+      {spk:'あなた',ruby:'この<ruby>ビールサーバー<rt>びーるさーばー</rt></ruby>、自分で使っていいんですか？',en:'Can I use this beer server myself?'},
+      {spk:'スタッフ',ruby:'はい、<ruby>飲み放題<rt>のみほうだい</rt></ruby>ですので、ご<ruby>自由<rt>じゆう</rt></ruby>にどうぞ。<ruby>グラス<rt>ぐらす</rt></ruby>を<ruby>斜<rt>ななめ</rt></ruby>めにして<ruby>注<rt>つ</rt></ruby>ぐと<ruby>泡<rt>あわ</rt></ruby>が<ruby>少<rt>すく</rt></ruby>なくなりますよ。',en:"Yes, it's all-you-can-drink, so feel free! If you tilt the glass when pouring, you'll get less foam."},
+      {spk:'あなた',ruby:'あ、<ruby>あふれ<rt>あふれ</rt></ruby>ちゃった！',en:'Oh no, it overflowed!'},
+      {spk:'スタッフ',ruby:'<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>ですよ、<ruby>最初<rt>さいしょ</rt></ruby>はみんなそうなりますよ。',en:'No worries, everyone does that at first!'},
+      {spk:'あなた',ruby:'もう<ruby>1<rt>いっ</rt></ruby><ruby>杯<rt>ぱい</rt></ruby><ruby>挑戦<rt>ちゃれんじ</rt></ruby>します！',en:"I'll try again for another glass!"}
+    ],
+    sys:'You are a friendly staff member at an all-you-can-drink beer hall in Nagasaki City. Help the user practice Japanese related to self-pour beer servers and dining out. Respond primarily in Japanese then English in parentheses. Gently correct mistakes. Keep replies concise (2-4 sentences).'
   }
 };
 
