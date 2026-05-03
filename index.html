@@ -155,6 +155,22 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--brow
       </div>
     </div>
   </div>
+nagasaki:{
+    name:'長崎市',
+    nameRuby:'<ruby>長崎市<rt>ながさきし</rt></ruby>',
+    nameEn:'Nagasaki City',imgKey:'nagasaki',
+    videoUrl:'https://youtu.be/d7xnwNFvjak?si=wYzvw04vfsBq3-nL',
+    desc:'<ruby>長崎<rt>ながさき</rt></ruby>は<ruby>港町<rt>こうまち</rt></ruby>の<ruby>雰囲気<rt>ふんいき</rt></ruby>と<ruby>ビール<rt>びーる</rt></ruby>の<ruby>産地<rt>さんち</rt></ruby>として知られる町です。<ruby>飲み放題<rt>のみほうだい</rt></ruby>のバーやビアホールが多く、自分でビールサーバーを操作する楽しさも人気です。',
+    scene:'ビアホールで飲み放題を楽しむ場面',
+    convs:[
+      {spk:'あなた',ruby:'この<ruby>ビールサーバー<rt>びーるさーばー</rt></ruby>、自分で使っていいんですか？',en:'Can I use this beer server myself?'},
+      {spk:'スタッフ',ruby:'はい、<ruby>飲み放題<rt>のみほうだい</rt></ruby>ですので、ご<ruby>自由<rt>じゆう</rt></ruby>にどうぞ。<ruby>グラス<rt>ぐらす</rt></ruby>を<ruby>斜<rt>ななめ</rt></ruby>めにして<ruby>注<rt>つ</rt></ruby>ぐと<ruby>泡<rt>あわ</rt></ruby>が<ruby>少<rt>すく</rt></ruby>なくなりますよ。',en:"Yes, it's all-you-can-drink, so feel free! If you tilt the glass when pouring, you'll get less foam."},
+      {spk:'あなた',ruby:'あ、<ruby>あふれ<rt>あふれ</rt></ruby>ちゃった！',en:'Oh no, it overflowed!'},
+      {spk:'スタッフ',ruby:'<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>ですよ、<ruby>最初<rt>さいしょ</rt></ruby>はみんなそうなりますよ。',en:'No worries, everyone does that at first!'},
+      {spk:'あなた',ruby:'もう<ruby>1<rt>いっ</rt></ruby><ruby>杯<rt>ぱい</rt></ruby><ruby>挑戦<rt>ちゃれんじ</rt></ruby>します！',en:"I'll try again for another glass!"}
+    ],
+    sys:'You are a friendly staff member at an all-you-can-drink beer hall in Nagasaki City. Help the user practice Japanese related to self-pour beer servers and dining out. Respond primarily in Japanese then English in parentheses. Gently correct mistakes. Keep replies concise (2-4 sentences).'
+  }
 </section>
 <section class="detail-panel" id="detail-panel"><div class="detail-card" id="detail-card"></div></section>
 <div class="overlay" id="overlay">
@@ -266,22 +282,7 @@ function selectSpot(id){
 function ea(s){return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 var cH=[],cS='';
 function openChat(id){
-  var s=SPOTS[id];if(!s)return;
-  cS=s.sys;cH=[];
-  document.getElementById('modal-title').textContent=s.name+' \u3067\u4f1a\u8a71\u7df4\u7fd2';
-  document.getElementById('msgs').innerHTML='';
-  var g=id==='dazaifu'
-    ?'\u3044\u3089\u3063\u3057\u3083\u3044\u307e\u305b\uff01\u592a\u5bb0\u5e9c\u5929\u6e80\u5bae\u3078\u3088\u3046\u3053\u305d\u3002\ud83c\udf38\n\u4f55\u304b\u304a\u624b\u4f1d\u3044\u3067\u304d\u307e\u3059\u304b\uff1f\n\n(Welcome to Dazaifu Tenmangu! May I help you?)'
-    :'\u3088\u3046\u6765\u305f\u306d\uff01\u5c71\u7b20\u3092\u898b\u306b\u6765\u305f\uff1f\ud83c\udf8f\n\u3069\u3053\u304b\u3089\uff1f\n\n(Welcome! Did you come to see the Yamakasa? Where are you from?)';
-  am('ai',g);cH.push({role:'assistant',content:g});
-  document.getElementById('overlay').classList.add('open');
-  setTimeout(function(){document.getElementById('chat-inp').focus();},350);
-}
-function closeChat(){
-  if(window.speechSynthesis)window.speechSynthesis.cancel();
-  if(_curAudio){_curAudio.pause();_curAudio.currentTime=0;}
-  document.getElementById('overlay').classList.remove('open');
-}
+ spots
 function am(t,tx){
   var el=document.getElementById('msgs');
   var d=document.createElement('div');d.className='msg '+t;d.textContent=tx;
